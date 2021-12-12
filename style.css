@@ -1,0 +1,339 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    src: url("fonts/Roboto/roboto-v29-cyrillic-regular.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 300;
+    src: url("fonts/Roboto/roboto-v29-cyrillic-300.woff2") format("woff2");
+    font-display: swap;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #6B6B6B;
+    background-color: #FFFFFF;
+    min-width: 1140px;
+    margin: 0 auto;
+}
+
+.header {
+    min-width: 100%;
+    margin: 0 auto;
+    background-color: #F4F4F4;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1440px;
+    margin: 0 auto;
+    padding: 51px 0 21px 0;
+}
+
+.buttons {
+    margin-left: 140px;
+}
+
+.button {
+    border: none;
+    background-color: #0271C7;
+    color: #FFFFFF;
+    padding: 6px 12px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.button-refresh {
+    margin-left: 7px;
+}
+
+.search {
+    margin-right: 293px;
+}
+
+.input-search {
+    width: 209px;
+    padding: 6px 12px;
+    border: 1px solid #CFCFCF;
+    box-shadow: inset 0px 0px 1px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+}
+
+
+/* Задаю позиционирование, чтобы относительно формы расположить иконку */
+
+.form-search {
+    position: relative;
+}
+
+
+/* Иконка поиска */
+
+.form-search::before {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: url('images/search-icon.svg') no-repeat;
+    top: 4px;
+    left: -40px;
+}
+
+::placeholder {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #CFCFCF;
+}
+
+.main {
+    padding-top: 11px;
+}
+
+
+/*Обёртка дял всей шапки из main */
+
+.header-main {
+    width: 1440px;
+}
+
+
+/* Контейнер с переключателем и экстра-кнопкой */
+
+.month-container {
+    display: flex;
+    align-items: center;
+    width: 1024px;
+    margin: 0 auto;
+    padding-left: 12px;
+}
+
+
+/* Обёртка для отдельного выравнивания стрелок-перелкючателей и текстом даты */
+
+.wrapped-date-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 220px;
+}
+
+
+/* Стили на кнопок-переключателей  */
+
+.angle-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 24px;
+    border: 1px solid transparent;
+    background-color: #FFFFFF;
+    box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.angle-left {
+    transform: rotate(-180deg);
+}
+
+.date-text {
+    font-size: 18px;
+    line-height: 21px;
+    color: #292929;
+}
+
+.extra-button {
+    padding: 2px 6px;
+    border: none;
+    background-color: #FFFFFF;
+    box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    margin-left: 10px;
+    font-size: 12px;
+    line-height: 14px;
+    width: 58px;
+}
+
+.angle-path {
+    fill: #6B6B6B;
+}
+
+
+/* Ячейки календаря */
+
+.days-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1024px;
+    margin: 0 auto;
+    margin-top: 11px;
+    margin-left: 220px;
+}
+
+
+/* Задаю общий стиль ячейкам */
+
+.days-cell {
+    width: 144px;
+    height: 121px;
+    border: 1px solid #292929;
+    margin-left: -1px;
+    margin-bottom: -1px;
+    padding: 8px;
+}
+
+
+/* Заглавие и описание для ячейки */
+
+.days-box {
+    width: 125px;
+    height: 56px;
+    margin-top: 9px;
+}
+
+.days-box-title {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #292929;
+    padding: 0;
+    margin: 0;
+}
+
+.days-box-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-top: 9px;
+}
+
+.days-box-item {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.default {
+    background-color: #C2E4FE;
+}
+
+
+/* FOCUS HOVER ACTIVE */
+
+
+/* Поведение для кнопок */
+
+.button:disabled {
+    background-color: #CFCFCF;
+}
+
+.button:hover {
+    background-color: #27A1FF;
+}
+
+.button:active {
+    background-color: #C2E4FE;
+}
+
+
+/* Extra-button */
+
+.extra-button:hover {
+    background-color: #6B6B6B;
+    color: #FFFFFF;
+}
+
+.extra-button:active {
+    background-color: #CFCFCF;
+}
+
+.extra-button:disabled {
+    background-color: #FFFFFF;
+    color: #CFCFCF;
+}
+
+
+/* Angle-button */
+
+.angle-button:hover {
+    background-color: #6B6B6B;
+}
+
+.angle-button:active {
+    background-color: #CFCFCF;
+}
+
+.angle-button:disabled {
+    background-color: #FFFFFF;
+}
+
+.angle-button:hover .angle-path {
+    fill: #FFFFFF;
+}
+
+.angle-button:disabled .angle-path {
+    fill: #CFCFCF;
+}
+
+
+/* Поведения для input */
+
+.input-search:focus-visible {
+    outline: none;
+    box-shadow: inset 0px 0px 1px 2px rgba(39, 161, 255, 0.25);
+}
+
+.input-search:invalid {
+    box-shadow: inset 0px 0px 1px 2px rgba(233, 78, 78, 0.25);
+}
+
+
+/* Поведение для ячеек календаря */
+
+.days-cell:hover {
+    background-color: #27A1FF;
+}
+
+.days-cell:active {
+    box-shadow: 0px 0px 10px 2px #0271C7;
+}

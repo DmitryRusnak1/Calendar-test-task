@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Календарь</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="header-container">
+                <div class="buttons">
+                    <button type="button" class="button button-add">Добавить</button>
+                    <button type="button" class="button button-refresh">Обновить</button>
+                </div>
+                <div class="search">
+                    <form class="form-search" action="#">
+                        <input class="input-search" type="search" name="search" id="search" placeholder="Placeholder">
+                    </form>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <header class="header-main">
+                <div class="month-container">
+                    <div class="wrapped-date-panel">
+                        <!-- Дополнительная обёртка, чтобы выровнять элементы -->
+                        <button class="angle-button angle-button-prev">
+                            <svg class="angle angle-left" width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="angle-path" d="M11.1158 6.52067L2.24034 0.462624C1.83045 0.182657 1.41746 0.0344849 1.07419 0.0344849C0.410533 0.0344849 0 0.565532 0 1.45444V14.5476C0 15.4355 0.410015 15.9655 1.07212 15.9655C1.41591 15.9655 1.82231 15.8172 2.2331 15.5365L11.1127 9.47857C11.6838 9.08834 12 8.56322 12 7.99929C12.0001 7.43575 11.6875 6.91076 11.1158 6.52067Z"/>
+                            </svg>
+                        </button>
+                        <div class="date">
+                            <span class="date-text">Ноябрь 2021</span>
+                        </div>
+                        <button class="angle-button angle-button-next">
+                            <svg class="angle angle-right" width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="angle-path" d="M11.1158 6.52067L2.24034 0.462624C1.83045 0.182657 1.41746 0.0344849 1.07419 0.0344849C0.410533 0.0344849 0 0.565532 0 1.45444V14.5476C0 15.4355 0.410015 15.9655 1.07212 15.9655C1.41591 15.9655 1.82231 15.8172 2.2331 15.5365L11.1127 9.47857C11.6838 9.08834 12 8.56322 12 7.99929C12.0001 7.43575 11.6875 6.91076 11.1158 6.52067Z" fill="#6B6B6B"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <button class="extra-button">Сегодня</button>
+                </div>
+            </header>
+            <div class="days-container">
+                <div class="days-cell">
+                    <span class="days-name">Понедельник,
+                    <span class="days-number">27</span>
+                    </span>
+                </div>
+                <div class="days-cell">
+                    <span class="days-name">Вторник,
+                    <span class="days-number">28</span>
+                    </span>
+                </div>
+                <div class="days-cell">
+                    <span class="days-name">Среда,
+                    <span class="days-number">29</span>
+                    </span>
+                </div>
+                <div class="days-cell default">
+                    <span class="days-name">Четверг,
+                    <span class="days-number">30</span>
+                    </span>
+                    <div class="days-box">
+                        <h2 class="days-box-title">Шашлыки</h2>
+                        <ul class="days-box-list">
+                            <li class="days-box-item">Филипп Коров,</li>
+                            <li class="days-box-item">Дмитрий Табасков</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="days-cell">
+                    <span class="days-name">Пятница,
+                    <span class="days-number">1</span>
+                    </span>
+                </div>
+                <div class="days-cell">
+                    <span class="days-name">Суббота,
+                    <span class="days-number">2</span>
+                    </span>
+                </div>
+                <div class="days-cell">
+                    <span class="days-name">Воскресенье,
+                    <span class="days-number">3</span>
+                    </span>
+                </div>
+                <div class="days-cell">4</div>
+                <div class="days-cell">5</div>
+                <div class="days-cell">6</div>
+                <div class="days-cell">7</div>
+                <div class="days-cell">8</div>
+                <div class="days-cell">9</div>
+                <div class="days-cell">10</div>
+                <div class="days-cell">11</div>
+                <div class="days-cell">12</div>
+                <div class="days-cell">13</div>
+                <div class="days-cell">14</div>
+                <div class="days-cell default">
+                    15
+                    <div class="days-box">
+                        <h2 class="days-box-title">Летний лагерь</h2>
+                        <ul class="days-box-list">
+                            <li class="days-box-item">Алексей Маральный</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="days-cell">16</div>
+                <div class="days-cell">17</div>
+                <div class="days-cell default">
+                    18
+                    <div class="days-box">
+                        <h3 class="days-box-title">Аква кутеж</h3>
+                        <ul class="days-box-list">
+                            <li class="days-box-item">Михаил Шустин,</li>
+                            <li class="days-box-item">Владимир Пупкин,</li>
+                            <li class="days-box-item">Дмитрий Медев</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="days-cell">19</div>
+                <div class="days-cell">20</div>
+                <div class="days-cell">21</div>
+                <div class="days-cell">22</div>
+                <div class="days-cell">23</div>
+                <div class="days-cell">24</div>
+                <div class="days-cell">25</div>
+                <div class="days-cell">26</div>
+                <div class="days-cell">27</div>
+                <div class="days-cell">28</div>
+                <div class="days-cell">29</div>
+                <div class="days-cell">30</div>
+                <div class="days-cell">31</div>
+            </div>
+        </main>
+    </body>
+</html>
