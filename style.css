@@ -327,6 +327,10 @@ body {
     box-shadow: inset 0px 0px 1px 2px rgba(233, 78, 78, 0.25);
 }
 
+.input-search:disabled {
+    background-color: #F4F4F4;
+}
+
 
 /* Поведение для ячеек календаря */
 
